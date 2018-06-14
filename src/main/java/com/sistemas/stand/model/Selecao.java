@@ -24,7 +24,7 @@ public class Selecao {
 	@Column(name = "nm_selecao")
 	private String nmSelecao;
 
-	@OneToMany(mappedBy = "selecao", cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "selecao", cascade = CascadeType.REMOVE, orphanRemoval = true)
 	private List<Jogador> jogadores = new ArrayList<Jogador>();
 
 	public Selecao() {
